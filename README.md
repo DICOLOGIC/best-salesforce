@@ -5,7 +5,7 @@ A repository of best practices, principles and standards that help us deliver gr
 ## GIT & CLI
 
 ### Package-oriented architecture
-
+Divide & conquer the org architecture into functional pieces. Remember: Concept & planning is 80% of the work, so invest some good amount of thoughts into cutting the functionality along processes and/or organizational units, before creating the package structure.
 
 Retrieves metadata from a package.xml and saves it in a specific subfolder
 ```
@@ -17,3 +17,8 @@ Deploys metadata from a specific package.xml in the subfolder
 sf project deploy start -a 58.0 --source-dir .\PackageXMLProject\
 ```
 use -a for the scratch org, or -o for an org
+
+Create managed package in a specified folder
+```
+sf package create --name MyManagedPackage --description "Your Package Descripton" --package-type Managed --path PackageXMLProject --target-dev-hub devhub@example.com
+```
