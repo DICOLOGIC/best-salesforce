@@ -14,5 +14,5 @@ sf project retrieve start -o MyTP  -x .\PackageXMLProject\package.xml -r .\Packa
 
 Deploys metadata from a specific package.xml in the subfolder
 ```
-sf project deploy start -x .\PackageXMLProject\package.xml -a 58.0
+sf project deploy start -a 58.0 --source-dir .\PackageXMLProject\
 ```
