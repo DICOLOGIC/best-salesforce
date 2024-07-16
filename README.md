@@ -16,3 +16,4 @@ Deploys metadata from a specific package.xml in the subfolder
 ```
 sf project deploy start -a 58.0 --source-dir .\PackageXMLProject\
 ```
+use -a for the scratch org, or -o for an org
