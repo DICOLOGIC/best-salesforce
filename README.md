@@ -18,6 +18,11 @@ sf project deploy start -a 58.0 --source-dir .\PackageXMLProject\
 ```
 use -a for the scratch org, or -o for an org
 
+#### Create a scratch org
+```
+sf org create scratch --target-dev-hub MyHub --duration-days 3
+```
+
 #### Create managed package in a specified folder
 ```
 sf package create --name MyManagedPackage --description "Your Package Descripton" --package-type Managed --path PackageXMLProject --target-dev-hub devhub@example.com
