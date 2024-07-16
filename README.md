@@ -20,7 +20,13 @@ use -a for the scratch org, or -o for an org
 
 #### Create a scratch org
 ```
-sf org create scratch --target-dev-hub MyHub --duration-days 3
+sf org create scratch --target-dev-hub MyHub --duration-days 3 -e=enterprise
+```
+Use e=enterprise or develop
+
+#### Open the scratch org
+```
+sf org open --target-org MyGroovyScratchOrg
 ```
 
 #### Create managed package in a specified folder
