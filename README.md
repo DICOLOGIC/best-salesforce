@@ -12,6 +12,11 @@ Divide & conquer the org architecture into functional pieces. Remember: Concept 
 sf project retrieve start -o MyTP  -x .\PackageXMLProject\package.xml -r .\PackageXMLProject\
 ```
 
+#### Retrieve a specific component
+```
+sf project retrieve start --metadata CustomObject:NameOfObject
+```
+
 #### Deploy metadata from a specific package.xml in the subfolder
 ```
 sf project deploy start -a 58.0 --source-dir .\PackageXMLProject\
