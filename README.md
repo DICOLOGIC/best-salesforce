@@ -38,3 +38,13 @@ sf org open --target-org MyGroovyScratchOrg
 ```
 sf package create --name MyManagedPackage --description "Your Package Descripton" --package-type Managed --path PackageXMLProject --target-dev-hub devhub@example.com
 ```
+
+#### Create version for managed package
+```
+sf package version create --package "Package Name" --installation-key “123456789” --wait 10
+```
+
+#### Install package version
+```
+sf package version create --package "Package Name" --installation-key “123456789” --wait 10
+```
