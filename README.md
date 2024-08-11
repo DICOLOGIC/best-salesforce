@@ -39,6 +39,8 @@ sf org open --target-org MyGroovyScratchOrg
 sf package create --name MyManagedPackage --description "Your Package Descripton" --package-type Managed --path PackageXMLProject --target-dev-hub devhub@example.com
 ```
 
+Attention: do not specify the namespace for custom metadata object and the corresponding records, or it won't be included in the package!
+
 #### Create version for managed package
 ```
 sf package version create --package "Package Name" --installation-key “123456789” --wait 10
