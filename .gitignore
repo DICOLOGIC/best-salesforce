@@ -1,0 +1,5 @@
+secrets*
+.sfdx
+.husky
+.vscode
+config
