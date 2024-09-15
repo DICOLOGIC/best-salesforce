@@ -48,5 +48,5 @@ sf package version create --package "Package Name" --installation-key “1234567
 
 #### Install package version
 ```
-sf package version create --package "Package Name" --installation-key “123456789” --wait 10
+sf package package install --package "package-version" --target-org username@org.com --installation-key “123456789” --wait 10
 ```
