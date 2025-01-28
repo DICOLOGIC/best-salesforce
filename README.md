@@ -52,6 +52,8 @@ sf package package install --package "package-version" --target-org username@org
 ```
 
 #### Get authorization URL for deployment
+```
 sf org display --verbose
 sf org display --verbose --json > authFile.json
+```
 
