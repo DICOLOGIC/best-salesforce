@@ -50,3 +50,8 @@ sf package version create --package "Package Name" --installation-key “1234567
 ```
 sf package package install --package "package-version" --target-org username@org.com --installation-key “123456789” --wait 10
 ```
+
+#### Get authorization URL for deployment
+sf org display --verbose
+sf org display --verbose --json > authFile.json
+
