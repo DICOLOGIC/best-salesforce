@@ -1,71 +1,99 @@
-# Setting up Salesforce CLI in GIT
+# Setting up Salesforce CLI in Git
 
-1. Connect VS Code with GitHub Repository
-- create local folder for repository
-- Open a terminal
-- WINKEY+R
-- "cmd"
-- mkdir "new repository"
-- enter the new folder cd new repository
-- git clone https://github.com/org/Salesforcerepo.git
-- open VS Code
-- choose "Open Folder..." and open the repository 
+## 1. Connect VS Code with GitHub Repository
 
-2. Check SF CLI
-- Check if SF is install by typing "sf" in the terminal in VS Code
-- if not installed, download here https://developer.salesforce.com/tools/salesforcecli
+- Create a local folder for the repository:
+  - Press `WIN + R`, type `cmd`
+  - Run:
+    ```bash
+    mkdir "new-repository"
+    cd new-repository
+    git clone https://github.com/org/Salesforcerepo.git
+    ```
+- Open VS Code
+- Select **File > Open Folder...** and choose the cloned repository
 
-3. Check GIT cli
-- Check if GIT is installed by typing "git status" in the terminal in VS Code
-- if not installed, download here https://git-scm.com/downloads/win
+## 2. Check Salesforce CLI
 
-3b. Configure git user.name and user.email (if you see errors)
-- Open the terminal
-- Enter the following command
-- git config --global user.name "Your Name"
-- git config --global user.email "Your Email"
+- In VS Code terminal, type:
+  ```bash
+  sf
+  ```
+- If not installed, download from:  
+  👉 [https://developer.salesforce.com/tools/salesforcecli](https://developer.salesforce.com/tools/salesforcecli)
 
-3. Create first file to initialize
-- In VS Code create the file "readme.md" with any text as content
+## 3. Check Git CLI
+
+- In terminal, type:
+  ```bash
+  git status
+  ```
+- If not installed, download from:  
+  👉 [https://git-scm.com/downloads/win](https://git-scm.com/downloads/win)
+
+### 3b. Configure Git User (if needed)
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+```
+
+## 4. Initialize the Repository
+
+- In VS Code, create a file named `README.md` with any content
 - Save the file
-- Sync by commit
+- Commit and publish the branch
+
+## 5. Create a New Branch for the Sandbox
+
+- In GitHub: create a branch from `main` for the sandbox
+- In VS Code: click on the branch name (bottom-left), create a new branch
 - Publish the branch
 
-4. Create new branch for the sandbox
-- In GitHub, create a branch from main for any sandbox you wish to start from
-- In VS Code you can click on the bottom "main" and create a new branch
-- Publish the branch under "changes"
+## 6. Check for Salesforce Extensions in VS Code
 
-5. Check if you have the VS Code Salesforce CLI extension
-- You need to install Salesforce CLI
+- Ensure the **Salesforce Extension Pack** is installed
 
-6. Create SFDX Project
-- To Create the project open Command Palette or press Ctrl + Shift + P.  Then type >SFDX: Create Project with Manifest .
-- Sync the changes
+## 7. Create an SFDX Project
 
-7. Connect org
-- Open the command palette and Authorize an Ord
-- Enter an alias to recognize the org
-- Authorize via Web
+- Open Command Palette (`Ctrl + Shift + P`)
+- Run: `SFDX: Create Project with Manifest`
+- Sync the project
 
-8. Create the package.xml
-- Add the elements you would like to retrieve to the package.xml
+## 8. Connect to an Org
 
-9. First retrieval of org data from sandbox
-- Open the package.xml and right-click anywhere in the text, select "Retrieve Source in Manifest from Org"
-- Check and resolve errors
+- Open Command Palette → `SFDX: Authorize an Org`
+- Provide an alias
+- Authorize via web login
 
-10. Retrieval of org data from production
-- Change into main and repeat the steps for creating the project (pay attention to the right main folder)
-- Retrieve the elements via package.xml
+## 9. Create and Edit `package.xml`
 
-## Manually deploy
-- Create new branch from main (call it like a ticket or with a date)
-- Connect to the sandbox you want to deploy from
-- Retrieve the metadata from the sandbox into the new branch you created
-- Check the changes in the source view
-- Open package.xml, right-click anywhere and then select "Deploye Source to Org"
-- Check errors and correct the package.xml where necessary
+- Add metadata types to retrieve (e.g., CustomObject, Layout, ApexClass)
 
-## Setup Workflows and CLI
+## 10. Retrieve Org Data from Sandbox
 
+- Right-click inside `package.xml` → `Retrieve Source in Manifest from Org`
+- Review and resolve errors if any
+
+## 11. Retrieve Org Data from Production
+
+- Switch to `main` branch
+- Repeat the setup and retrieval process
+- Ensure you're working in the correct folder/project
+
+---
+
+## Manual Deployment
+
+- Create a new branch from `main` (e.g., named after a ticket or date)
+- Connect to the sandbox you're deploying **from**
+- Retrieve metadata into this branch
+- Review changes in the **source control view**
+- Open `package.xml`, right-click → `Deploy Source to Org`
+- Check and resolve deployment errors
+
+---
+
+## Final Notes
+
+- Set up scripts and workflows for frequent tasks via Salesforce CLI
