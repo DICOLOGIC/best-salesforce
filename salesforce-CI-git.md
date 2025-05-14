@@ -11,7 +11,13 @@
 - open VS Code
 - choose "Open Folder..." and open the repository 
 
-2. Init SF CLI
+2. Check SF CLI
 - Check if SF is install by typing "sf" in the terminal in VS Code
 - if not installed, download here https://developer.salesforce.com/tools/salesforcecli
-- 
+
+3. Check GIT cli
+- Check if GIT is installed by typing "git status" in the terminal in VS Code
+- if not installed, download here https://git-scm.com/downloads/win
+
+3. Create branch for sandbox
+- In GitHub, create a branch from main for any sandbox you wish to start from
