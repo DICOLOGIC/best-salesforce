@@ -37,13 +37,35 @@
 - Publish the branch under "changes"
 
 5. Check if you have the VS Code Salesforce CLI extension
-- You need to isntall Salesforce CLI
+- You need to install Salesforce CLI
 
 6. Create SFDX Project
-- To Create the project open Command Palette or press Ctrl + Shift + P.  Then type SFDX: Create Project with Manifest .
+- To Create the project open Command Palette or press Ctrl + Shift + P.  Then type >SFDX: Create Project with Manifest .
 - Sync the changes
 
 7. Connect org
 - Open the command palette and Authorize an Ord
 - Enter an alias to recognize the org
 - Authorize via Web
+
+8. Create the package.xml
+- Add the elements you would like to retrieve to the package.xml
+
+9. First retrieval of org data from sandbox
+- Open the package.xml and right-click anywhere in the text, select "Retrieve Source in Manifest from Org"
+- Check and resolve errors
+
+10. Retrieval of org data from production
+- Change into main and repeat the steps for creating the project (pay attention to the right main folder)
+- Retrieve the elements via package.xml
+
+## Manually deploy
+- Create new branch from main (call it like a ticket or with a date)
+- Connect to the sandbox you want to deploy from
+- Retrieve the metadata from the sandbox into the new branch you created
+- Check the changes in the source view
+- Open package.xml, right-click anywhere and then select "Deploye Source to Org"
+- Check errors and correct the package.xml where necessary
+
+## Setup Workflows and CLI
+
