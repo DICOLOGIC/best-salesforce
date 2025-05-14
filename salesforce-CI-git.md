@@ -19,5 +19,31 @@
 - Check if GIT is installed by typing "git status" in the terminal in VS Code
 - if not installed, download here https://git-scm.com/downloads/win
 
-3. Create branch for sandbox
+3b. Configure git user.name and user.email (if you see errors)
+- Open the terminal
+- Enter the following command
+- git config --global user.name "Your Name"
+- git config --global user.email "Your Email"
+
+3. Create first file to initialize
+- In VS Code create the file "readme.md" with any text as content
+- Save the file
+- Sync by commit
+- Publish the branch
+
+4. Create new branch for the sandbox
 - In GitHub, create a branch from main for any sandbox you wish to start from
+- In VS Code you can click on the bottom "main" and create a new branch
+- Publish the branch under "changes"
+
+5. Check if you have the VS Code Salesforce CLI extension
+- You need to isntall Salesforce CLI
+
+6. Create SFDX Project
+- To Create the project open Command Palette or press Ctrl + Shift + P.  Then type SFDX: Create Project with Manifest .
+- Sync the changes
+
+7. Connect org
+- Open the command palette and Authorize an Ord
+- Enter an alias to recognize the org
+- Authorize via Web
